@@ -9,8 +9,7 @@ var oldGrpMsgs;
 
 window.addEventListener("DOMContentLoaded", () => {
   if (!token) {
-    window.location.href =
-      "C:Users\roshiDesktop\backendSharpenerchatApp\frontendhtmllogin.html";
+    window.location.href = "http://43.205.120.101:3000/login.html";
   }
 
   getAllChats();
@@ -30,7 +29,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 async function getAllGroups() {
   const response = await axios.get(
-    "http://localhost:3000/group-chat/all-groups",
+    "http://43.205.120.101:3000/group-chat/all-groups",
     {
       headers: { Authorization: token },
     }
@@ -61,7 +60,7 @@ async function AddNewGroup(e) {
     return;
   }
   const response = await axios.post(
-    "http://localhost:3000/group-chat/new-group",
+    "http://43.205.120.101:3000/group-chat/new-group",
     {
       groupName: groupName,
     },
@@ -90,7 +89,7 @@ async function sendNewText() {
   let obj;
   if (profileUsername.classList.contains("group")) {
     const groudId = profileUsername.id;
-    apiCall = "http://localhost:3000/group-chat/new-chat";
+    apiCall = "http://43.205.120.101:3000/group-chat/new-chat";
     obj = {
       id: groudId,
       content: newText,
@@ -98,7 +97,7 @@ async function sendNewText() {
     console.log("am i here");
   } else {
     const OtherUserId = profileUsername.id;
-    apiCall = "http://localhost:3000/chat/new-chat";
+    apiCall = "http://43.205.120.101:3000/chat/new-chat";
     obj = {
       id: OtherUserId,
       content: newText,
@@ -128,9 +127,12 @@ function addToChatList(newText, isSent, username) {
 }
 
 async function getAllChats() {
-  const response = await axios.get("http://localhost:3000/chat/all-chats", {
-    headers: { Authorization: token },
-  });
+  const response = await axios.get(
+    "http://43.205.120.101:3000/chat/all-chats",
+    {
+      headers: { Authorization: token },
+    }
+  );
   //   console.log(response);
   const chatList = response.data.allUser;
   addToContactList(chatList, false);
@@ -185,7 +187,7 @@ async function specificGroup(e) {
       addOldMsgs(oldGrpMsgs);
     }
     const response = await axios.get(
-      `http://localhost:3000/group-chat/get-chat/${groupId}?lastmsg=${lastmsg}`,
+      `http://43.205.120.101:3000/group-chat/get-chat/${groupId}?lastmsg=${lastmsg}`,
       {
         headers: { Authorization: token },
       }
@@ -240,7 +242,7 @@ async function getGroupMembers(e) {
     groupmembershtml.classList.add("active");
   }
   const response = await axios.get(
-    `http://localhost:3000/group-chat/get-all-users/${groupId}`,
+    `http://43.205.120.101:3000/group-chat/get-all-users/${groupId}`,
     {
       headers: { Authorization: token },
     }
@@ -288,7 +290,7 @@ async function removeUserGroup(e) {
   const groupId = document.getElementsByClassName("profile-username")[0].id;
   const userId = e.target.name;
   const response = await axios.delete(
-    `http://localhost:3000/group-chat/remove-user/${groupId}?userId=${userId}`,
+    `http://43.205.120.101:3000/group-chat/remove-user/${groupId}?userId=${userId}`,
     {
       headers: { Authorization: token },
     }
@@ -305,7 +307,7 @@ async function makeUserAdmin(e) {
   const groupId = document.getElementsByClassName("profile-username")[0].id;
   const userId = e.target.name;
   const response = await axios.post(
-    `http://localhost:3000/group-chat/make-user-admin/${groupId}`,
+    `http://43.205.120.101:3000/group-chat/make-user-admin/${groupId}`,
     {
       userId: userId,
     },
@@ -352,7 +354,7 @@ async function NewGroupMember(e) {
   const groupId = document.getElementsByClassName("profile-username")[0].id;
   const userId = e.target.name;
   const response = await axios.post(
-    `http://localhost:3000/group-chat/add-user`,
+    `http://43.205.120.101:3000/group-chat/add-user`,
     {
       userId: userId,
       groupId,
@@ -384,7 +386,7 @@ async function specificUser(e) {
     }
     let response;
     response = await axios.get(
-      `http://localhost:3000/chat/user/${rid}?lastmsg=${lastmsg}`,
+      `http://43.205.120.101:3000/chat/user/${rid}?lastmsg=${lastmsg}`,
       {
         headers: { Authorization: token },
       }

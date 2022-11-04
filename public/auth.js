@@ -1,6 +1,6 @@
 const showPass = document.getElementsByClassName("fa-eye-slash")[0];
 const btn = document.getElementsByClassName("btn")[0];
-const apiCall = "http://localhost:3000";
+const apiCall = "http://43.205.120.101:3000";
 
 window.addEventListener("DOMContentLoaded", () => {
   showPass.addEventListener("click", showPassword);
@@ -33,8 +33,7 @@ async function getUser(e) {
   localStorage.setItem("token", token);
   Message(response.data.msg);
   setTimeout(() => {
-    window.location.href =
-      "file:///C:/Users/roshi/Desktop/backendSharpener/chatApp/frontend/html/chat.html";
+    window.location.href = "http://43.205.120.101:3000/chat.html";
   }, 1000);
 }
 
@@ -61,8 +60,7 @@ async function addNewUser(e) {
   // console.log(response);
   Message(response.data.msg);
   setTimeout(() => {
-    window.location.href =
-      "file:///C:/Users/roshi/Desktop/backendSharpener/chatApp/frontend/html/login.html";
+    window.location.href = "http://43.205.120.101:3000/login.html";
   }, 1000);
 }
 

@@ -4,24 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/auth.css" />
+    <link rel="stylesheet" href="./auth.css" />
     <title>Chat App</title>
   </head>
   <body>
     <div class="container">
       <div class="container-body">
         <form class="form">
-          <h1 class="form-title">Sign Up</h1>
-          <div class="form-input">
-            <i class="fa-solid fa-user"></i>
-            <input
-              type="text"
-              id="username"
-              placeholder="Username"
-              autocomplete="off"
-              value="user"
-            />
-          </div>
+          <h1 class="form-title">Sign In</h1>
           <div class="form-input">
             <i class="fa-solid fa-envelope"></i>
             <input
@@ -30,16 +20,6 @@
               placeholder="Email"
               autocomplete="off"
               value="user@gmail.com"
-            />
-          </div>
-          <div class="form-input">
-            <i class="fa-solid fa-phone"></i>
-            <input
-              type="text"
-              id="phoneNumber"
-              placeholder="Phone Number"
-              autocomplete="off"
-              value="9999999999"
             />
           </div>
           <div class="form-input form-pass">
@@ -53,9 +33,9 @@
             />
             <i class="fa-solid fa-eye-slash"></i>
           </div>
-          <button class="btn" id="register">Register</button>
+          <button class="btn" id="login">Login</button>
           <p class="acc">
-            Already Have An Account?<a href="./login.html">Sign In here</a>
+            Already Have An Account?<a href="./register.html">Sign Up here</a>
           </p>
         </form>
       </div>
@@ -71,5 +51,5 @@
     crossorigin="anonymous"
   ></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
-  <script src="../js/auth.js" async></script>
+  <script src="./auth.js" async></script>
 </html>
