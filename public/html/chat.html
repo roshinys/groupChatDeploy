@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/chat.css" />
+    <title>Chat App</title>
+  </head>
+  <body>
+    <div class="addGroupForm">
+      <form>
+        <h1>Add Group</h1>
+        <input id="groupName" type="text" placeholder="GroupName" />
+        <button id="newgroup">Create Group</button>
+      </form>
+    </div>
+    <div class="container">
+      <div class="container-left">
+        <div class="header">
+          <img class="profileImg" src="../images/images.jpg" />
+          <i id="addnewgroup" class="fa-solid fa-people-line"></i>
+        </div>
+        <div class="searchbar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search.." />
+        </div>
+        <div class="contact-list">
+          <!-- <div class="contact">
+            <div class="contact-info">
+              <img class="profileImg" src="../images/images.jpg" />
+              <div class="text-info">
+                <h3>Roshin MSK</h3>
+                <p>last sent msg</p>
+              </div>
+            </div>
+            <p class="date">12:04am</p>
+          </div> -->
+        </div>
+      </div>
+      <div class="container-right">
+        <div class="header container-right-header">
+          <img class="profileImg" src="../images/images.jpg" />
+          <p class="profile-username">Username</p>
+        </div>
+        <div class="texts">
+          <!-- <div class="text sent">
+            <p>Hello</p>
+          </div>
+          <div class="text">
+            <p>Hey</p>
+          </div> -->
+        </div>
+        <div class="add-user">
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="get-group">
+          <i class="fa-solid fa-user-group"></i>
+        </div>
+        <div class="group-members">
+          <!-- <div class="group-member">
+            <h3>username</h3>
+            <button>admin</button>
+            <button>remove</button>
+          </div>
+          <div class="group-member">
+            <h3>username</h3>
+            <button>admin</button>
+            <button>remove</button>
+          </div> -->
+        </div>
+        <div class="add-user-form">
+          <h3>Add User</h3>
+          <span id="exit-add-user">X</span>
+          <input id="search-user" type="text" placeholder="search user" />
+          <div class="searched-user">
+            <!-- <h4>username</h4>
+            <button>Add</button> -->
+          </div>
+        </div>
+        <div class="footer">
+          <!-- <form action="/"> -->
+          <input type="text" id="newtext" placeholder="Send Message..." />
+          <button id="sendMessage">send</button>
+          <!-- </form> -->
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/0fd9e054d2.js"
+    crossorigin="anonymous"
+    async
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+  <script src="../js/chat.js" async></script>
+</html>

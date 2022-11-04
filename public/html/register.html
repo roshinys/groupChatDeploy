@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/auth.css" />
+    <title>Chat App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-body">
+        <form class="form">
+          <h1 class="form-title">Sign Up</h1>
+          <div class="form-input">
+            <i class="fa-solid fa-user"></i>
+            <input
+              type="text"
+              id="username"
+              placeholder="Username"
+              autocomplete="off"
+              value="user"
+            />
+          </div>
+          <div class="form-input">
+            <i class="fa-solid fa-envelope"></i>
+            <input
+              type="text"
+              id="email"
+              placeholder="Email"
+              autocomplete="off"
+              value="user@gmail.com"
+            />
+          </div>
+          <div class="form-input">
+            <i class="fa-solid fa-phone"></i>
+            <input
+              type="text"
+              id="phoneNumber"
+              placeholder="Phone Number"
+              autocomplete="off"
+              value="9999999999"
+            />
+          </div>
+          <div class="form-input form-pass">
+            <i class="fa-solid fa-lock"></i>
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              autocomplete="off"
+              value="123456"
+            />
+            <i class="fa-solid fa-eye-slash"></i>
+          </div>
+          <button class="btn" id="register">Register</button>
+          <p class="acc">
+            Already Have An Account?<a href="./login.html">Sign In here</a>
+          </p>
+        </form>
+      </div>
+      <div class="message">
+        <!-- <div class="message-body">
+          <h1 class="message-text">Smtg Went Wrong Dude</h1>
+        </div> -->
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/0fd9e054d2.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+  <script src="../js/auth.js" async></script>
+</html>
